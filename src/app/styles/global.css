@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-rose-50: #fff7f3;
+  --color-brand-rose-100: #f7e1dc;
+  --color-brand-rose-200: #efcecb;
+  --color-brand-rose-300: #e9bab8;
+  --color-brand-rose-400: #d89e9f;
+  --color-brand-rose-500: #c98388;
+  --color-brand-ink: #5f4a4d;
+  --color-brand-ink-soft: #7a6567;
+  --font-sans: "Manrope", "Segoe UI", Arial, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 bg-[radial-gradient(circle_at_top_left,rgba(216,158,159,0.28),transparent_28%),linear-gradient(180deg,#f9efeb_0%,#fffaf8_58%,#f7ebe7_100%)] font-sans text-brand-ink;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
