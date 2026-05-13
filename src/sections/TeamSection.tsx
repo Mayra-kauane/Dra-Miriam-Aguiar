@@ -42,7 +42,8 @@ const team = [
 ];
 
 export function TeamSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [transitionEnabled, setTransitionEnabled] = useState(true);
   const [visibleCards, setVisibleCards] = useState(1);
 
   useEffect(() => {
@@ -66,21 +67,45 @@ export function TeamSection() {
     return () => window.removeEventListener("resize", updateVisibleCards);
   }, []);
 
-  const maxIndex = useMemo(
-    () => Math.max(team.length - visibleCards, 0),
+  const loopedTeam = useMemo(
+    () => [
+      ...team.slice(-visibleCards),
+      ...team,
+      ...team.slice(0, visibleCards),
+    ],
     [visibleCards],
   );
 
+  const resetCarouselPosition = (index: number) => {
+    setTransitionEnabled(false);
+    setCurrentIndex(index);
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => setTransitionEnabled(true));
+    });
+  };
+
   useEffect(() => {
-    setCurrentIndex((index) => Math.min(index, maxIndex));
-  }, [maxIndex]);
+    resetCarouselPosition(visibleCards);
+  }, [visibleCards]);
 
   const previousTeam = () => {
-    setCurrentIndex((index) => (index === 0 ? maxIndex : index - 1));
+    setCurrentIndex((index) => index - 1);
   };
 
   const nextTeam = () => {
-    setCurrentIndex((index) => (index >= maxIndex ? 0 : index + 1));
+    setCurrentIndex((index) => index + 1);
+  };
+
+  const handleTransitionEnd = () => {
+    if (currentIndex >= team.length + visibleCards) {
+      resetCarouselPosition(visibleCards);
+      return;
+    }
+
+    if (currentIndex < visibleCards) {
+      resetCarouselPosition(team.length + currentIndex);
+    }
   };
 
   return (
@@ -100,12 +125,15 @@ export function TeamSection() {
 
         <div className="relative mt-10 overflow-hidden md:mt-11">
           <div
-            className="flex items-stretch transition-transform duration-500 ease-out"
+            className={`flex items-stretch ${
+              transitionEnabled ? "transition-transform duration-500 ease-out" : ""
+            }`}
+            onTransitionEnd={handleTransitionEnd}
             style={{
               transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
             }}
           >
-            {team.map((member, index) => (
+            {loopedTeam.map((member, index) => (
               <article
                 key={`${member.name}-${index}`}
                 className="min-w-full px-[9px] md:min-w-[50%] xl:min-w-[25%]"
