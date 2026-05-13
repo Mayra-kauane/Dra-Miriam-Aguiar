@@ -36,7 +36,7 @@ export function HeroSection() {
       />
 
       <div className="relative mx-auto flex min-h-[620px] w-[min(1224px,calc(100vw-32px))] items-center py-10 sm:min-h-[600px] lg:h-full lg:min-h-0 lg:py-0">
-        <div className="max-w-[590px]">
+        <div className="w-full max-w-[590px]">
           <h1 className="max-w-[11ch] font-display text-[2.7rem] font-medium leading-[1.08] tracking-[-0.01em] text-brand-rose-400 sm:max-w-[12ch] sm:text-[3.25rem] lg:max-w-none lg:text-[56px]">
             Seu sorriso merece mais do que tratamento, merece excelência.
           </h1>
@@ -47,7 +47,7 @@ export function HeroSection() {
             resultados de excelência.
           </p>
 
-          <div className="mx-auto mt-7 flex w-full max-w-[290px] flex-col items-center gap-3 sm:mx-0 sm:max-w-none sm:flex-row sm:flex-wrap sm:items-start">
+          <div className="mx-auto mt-7 flex w-full max-w-[340px] flex-col items-center gap-3 sm:mx-0 sm:max-w-none sm:flex-row sm:flex-wrap sm:items-start">
             <a
               className="inline-flex h-[52px] w-full items-center justify-center rounded-full border border-white bg-white px-7 font-sans text-base font-semibold text-brand-ink shadow-[0_14px_30px_rgba(126,91,76,0.1)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#fff8f6] hover:text-brand-rose-500 hover:shadow-[0_18px_36px_rgba(126,91,76,0.16)] active:translate-y-0 active:bg-[#f5e2df] sm:w-auto"
               href="#tratamentos"
