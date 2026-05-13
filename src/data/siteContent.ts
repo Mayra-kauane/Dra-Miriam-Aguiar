@@ -12,43 +12,43 @@ import type {
 } from "../types/content";
 
 export const navItems: NavItem[] = [
-  { label: "Início", href: "#inicio" },
+  { label: "Inicio", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
   { label: "Tratamentos", href: "#tratamentos" },
+  { label: "Quem Somos", href: "#equipe" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Contato", href: "#contato" },
 ];
 
 export const services: Service[] = [
   {
-    title: "Implantodontia",
+    title: "Implantes Dentários",
     description:
-      "Especialidade da Dra. Miriam Aguiar, com planejamento cuidadoso para devolver função, estética e confiança ao sorriso.",
+      "Recupera dentes perdidos com função, estética e segurança de forma duradoura.",
   },
   {
-    title: "Avaliação personalizada",
+    title: "Clareamento Dental / Facetas",
     description:
-      "Cada caso é analisado de forma individual para construir um plano de tratamento alinhado às necessidades do paciente.",
+      "Sorriso mais branco e alinhado, com estética refinada e resultado natural.",
   },
   {
-    title: "Odontologia clínica",
+    title: "Prótese / Restaurações Dentárias",
     description:
-      "Atendimento completo com foco em saúde bucal, prevenção, diagnóstico preciso e acompanhamento próximo.",
+      "Restaura dentes danificados, devolvendo função e estética com resistência.",
   },
   {
-    title: "Reabilitação oral",
+    title: "Aparelhos Ortodônticos/invisalign",
     description:
-      "Soluções pensadas para recuperar mastigação, conforto e harmonia do sorriso com qualidade técnica.",
+      "Alinha os dentes com conforto, discrição e praticidade no tratamento.",
   },
   {
-    title: "Tratamentos com tecnologia",
-    description:
-      "O consultório conta com tecnologia de ponta para oferecer mais precisão, segurança e melhores resultados.",
+    title: "Tratamento de Canal",
+    description: "Remove infecção interna, alivia a dor e preserva o dente.",
   },
   {
-    title: "Agendamento flexível",
+    title: "Harmonização Facial",
     description:
-      "A clínica organiza o atendimento para que você sorria no seu tempo, com praticidade e acolhimento.",
+      "Valoriza os traços do rosto, com equilíbrio e aparência natural.",
   },
 ];
 
@@ -80,7 +80,7 @@ export const reviews: Review[] = [
   {
     name: "Francielli Soares",
     rating: "5.0",
-    text: "Iniciei meu tratamento em Janeiro de 2026 e até o momento só tenho a agradecer o trabalho da Dra. Miriam. Impecável!",
+    text: "Iniciei meu tratamento em janeiro de 2026 e até o momento só tenho a agradecer o trabalho da Dra. Miriam. Impecável!",
     avatar: cliente2,
   },
   {
@@ -89,16 +89,16 @@ export const reviews: Review[] = [
     text: "Conheço a Dra. Miriam há bom tempo, sendo seu paciente e de sua equipe também, sempre muito atenciosos, após quase uma década fora, prestativos em manutenção e restaurações. Recomendo!!",
     avatar: cliente3,
   },
-    {
+  {
     name: "Neysi Alvariza",
     rating: "5.0",
-    text: "Atendimento MARAVILHOSO tanto na recepção como dentro do consultório. A Dra Miriam tem uma paciência de ouro e deixa seus pacientes a vontade e confiantes no atendimento. Minha filha adorou, pois ela estava muito nervosa e a Dra foi impecável.",
+    text: "Atendimento maravilhoso tanto na recepção como dentro do consultório. A Dra. Miriam tem uma paciência de ouro e deixa seus pacientes à vontade e confiantes no atendimento. Minha filha adorou, pois ela estava muito nervosa e a Dra. foi impecável.",
     avatar: cliente4,
   },
-    {
+  {
     name: "Elaine Machado da Rosa",
     rating: "5.0",
-    text: "Admiro a profissional atenciosa, dedicada, competente que é a Dra Miriam Aguiar. O bom atendimento ali, começa na recepção!! Tenho certeza que toda a equipe presta um bom serviço. Agradeço e super Indico. Ambiente gostoso. Minha prima,levou de emergência na temporada,a filha criança de 5 anos,e foi super tranquilo,a Dra passa confiança, segurança,Tranquilidade, acalma o medo normal que até alguns adultos tem em relação a Dentista. PARABÉNS.",
+    text: "Admiro a profissional atenciosa, dedicada e competente que é a Dra. Miriam Aguiar. O bom atendimento começa na recepção. Tenho certeza que toda a equipe presta um ótimo serviço. A Dra. passa confiança, segurança e tranquilidade.",
     avatar: cliente5,
   },
 ];

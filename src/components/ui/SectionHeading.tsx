@@ -12,17 +12,19 @@ export function SectionHeading({
   align = "left",
 }: SectionHeadingProps) {
   const alignment =
-    align === "center" ? "mx-auto max-w-[720px] text-center" : "max-w-[720px]";
+    align === "center" ? "mx-auto max-w-[760px] text-center" : "max-w-[720px]";
 
   return (
     <div className={alignment}>
-      <span className="mb-3.5 inline-block text-xs font-bold uppercase tracking-[0.1em] text-brand-rose-500">
+      <span className="mb-3 inline-block text-xs font-bold uppercase tracking-[0.14em] text-brand-sage">
         {eyebrow}
       </span>
-      <h2 className="font-display text-4xl leading-[1.05] tracking-[-0.035em] text-brand-ink sm:text-5xl lg:text-[3.4rem]">
+      <h2 className="font-display text-[2.35rem] leading-[1.05] text-brand-ink sm:text-[3rem] lg:text-[3.35rem]">
         {title}
       </h2>
-      <p className="mt-[18px] leading-8 text-brand-ink/75">{description}</p>
+      <p className="mt-5 text-[1rem] leading-8 text-brand-ink/72">
+        {description}
+      </p>
     </div>
   );
 }
