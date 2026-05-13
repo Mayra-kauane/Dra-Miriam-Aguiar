@@ -4,28 +4,26 @@ import instagramIcon from "../../assets/figma/instagram.svg";
 import whatsappIcon from "../../assets/figma/whatsapp.svg";
 import { navItems } from "../../data/siteContent";
 
-function SocialIcon({ label, src }: { label: string; src: string }) {
+function SocialIcon({
+  label,
+  src,
+  href = "#inicio",
+}: {
+  label: string;
+  src: string;
+  href?: string;
+}) {
+  const isExternal = href.startsWith("http");
+
   return (
     <a
       aria-label={label}
       className="flex h-6 w-6 items-center justify-center rounded bg-brand-rose-400 transition hover:-translate-y-0.5 hover:bg-brand-rose-500"
-      href="#inicio"
+      href={href}
+      rel={isExternal ? "noreferrer" : undefined}
+      target={isExternal ? "_blank" : undefined}
     >
-      <img src={src} alt="" className="h-3 w-3 object-contain" />
-    </a>
-  );
-}
-
-function LinkedInIcon() {
-  return (
-    <a
-      aria-label="LinkedIn"
-      className="flex h-6 w-6 items-center justify-center rounded bg-brand-rose-400 text-white transition hover:-translate-y-0.5 hover:bg-brand-rose-500"
-      href="#inicio"
-    >
-      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-current">
-        <path d="M6.94 8.98H3.82V19h3.12V8.98ZM5.38 7.61c1 0 1.8-.81 1.8-1.81S6.38 4 5.38 4s-1.8.8-1.8 1.8.8 1.81 1.8 1.81ZM20.42 13.51c0-3.02-1.61-4.42-3.77-4.42-1.74 0-2.52.96-2.95 1.63V8.98h-3.12V19h3.12v-5.58c0-1.49.28-2.94 2.13-2.94 1.82 0 1.85 1.71 1.85 3.04V19h3.12v-5.49h-.38Z" />
-      </svg>
+      <img src={src} alt="" className="h-4 w-4 object-contain" />
     </a>
   );
 }
@@ -49,9 +47,16 @@ export function Header() {
       <div className="hidden h-8 items-center bg-white lg:flex">
         <div className="mx-auto flex w-[1216px] justify-end">
           <div className="flex gap-4">
-            <SocialIcon label="Facebook" src={facebookIcon} />
-            <SocialIcon label="Instagram" src={instagramIcon} />
-            <LinkedInIcon />
+            <SocialIcon
+              label="Facebook"
+              src={facebookIcon}
+              href="https://www.facebook.com/profile.php?id=100070379141084"
+            />
+            <SocialIcon
+              label="Instagram"
+              src={instagramIcon}
+              href="https://www.instagram.com/dra_miriamaguiarodontologia/"
+            />
           </div>
         </div>
       </div>
