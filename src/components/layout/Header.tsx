@@ -7,7 +7,7 @@ import { navItems } from "../../data/siteContent";
 function SocialIcon({
   label,
   src,
-  href = "#inicio",
+  href = "/inicio",
 }: {
   label: string;
   src: string;
@@ -65,7 +65,7 @@ export function Header() {
         <div className="mx-auto flex h-[80px] w-[min(1216px,calc(100vw-32px))] items-center gap-6">
           <a
             className="flex h-[54px] w-[176px] shrink-0 items-center"
-            href="#inicio"
+            href="/inicio"
             aria-label="Dra. Miriam Aguiar Odontologia"
           >
             <img

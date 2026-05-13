@@ -6,12 +6,12 @@ import type {
 } from "../types/content";
 
 export const navItems: NavItem[] = [
-  { label: "Início", href: "#inicio" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Tratamentos", href: "#tratamentos" },
-  { label: "Quem Somos", href: "#equipe" },
-  { label: "Diferenciais", href: "#diferenciais" },
-  { label: "Contato", href: "#contato" },
+  { label: "Início", href: "/inicio" },
+  { label: "Sobre", href: "/sobre" },
+  { label: "Tratamentos", href: "/tratamentos" },
+  { label: "Quem Somos", href: "/equipe" },
+  { label: "Diferenciais", href: "/diferenciais" },
+  { label: "Contato", href: "/contato" },
 ];
 
 export const services: Service[] = [
