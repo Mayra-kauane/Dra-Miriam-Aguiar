@@ -16,7 +16,7 @@ const team = [
   },
   {
     name: "Greicy Kelly da Cruz",
-    cargo: "Recepcionista e Estudante de Odontologia",
+    cargo: "Recepcionista e estudante de Odontologia",
     image: team2,
   },
   {
@@ -36,7 +36,7 @@ const team = [
   },
   {
     name: "Ericson Faria Pessanha Neto",
-    cargo: "Cirurgião-Dentista",
+    cargo: "Cirurgião-dentista",
     image: team6,
   },
 ];
@@ -112,13 +112,17 @@ export function TeamSection() {
     <section
       className="scroll-mt-24 bg-brand-rose-400 py-12 text-white md:py-14 lg:min-h-[700px]"
       id="equipe"
+      aria-labelledby="equipe-heading"
     >
       <div className="relative mx-auto w-[min(1216px,calc(100vw-32px))]">
         <div className="text-center">
           <span className="block font-sans text-xs font-bold uppercase tracking-[0.1em]">
             Nossa equipe
           </span>
-          <h2 className="mx-auto mt-4 max-w-[850px] font-display text-[2.45rem] leading-[1.05] tracking-[-0.02em] md:text-[3rem] lg:text-[50px]">
+          <h2
+            className="mx-auto mt-4 max-w-[850px] font-display text-[2.45rem] leading-[1.05] tracking-[-0.02em] md:text-[3rem] lg:text-[50px]"
+            id="equipe-heading"
+          >
             Conheça a nossa equipe <br /> de especialistas
           </h2>
         </div>
@@ -142,8 +146,10 @@ export function TeamSection() {
                   <div className="relative overflow-hidden rounded-[14px] bg-[#f3ebe6]">
                     <img
                       src={member.image}
-                      alt={member.name}
+                      alt={`${member.name}, ${member.cargo} da Dra. Miriam Aguiar Odontologia`}
                       className="h-[330px] w-full object-cover object-[center_18%] brightness-[0.94] contrast-[1.06] saturate-[0.92] md:h-[286px] md:object-top xl:h-[306px]"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(95,74,77,0.06),transparent_42%,rgba(95,74,77,0.08))]" />
                   </div>
@@ -154,6 +160,8 @@ export function TeamSection() {
                         src={teethIcon}
                         alt=""
                         className="h-4 w-4 object-contain"
+                        loading="lazy"
+                        decoding="async"
                       />
                       <h3 className="text-[16px] font-bold leading-[22px]">
                         {member.name}

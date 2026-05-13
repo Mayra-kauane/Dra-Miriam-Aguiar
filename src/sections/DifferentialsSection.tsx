@@ -11,13 +11,17 @@ export function DifferentialsSection() {
     <section
       className="scroll-mt-24 bg-white py-[72px] lg:min-h-[714px]"
       id="diferenciais"
+      aria-labelledby="diferenciais-heading"
     >
       <div className="mx-auto grid w-[min(1216px,calc(100vw-32px))] items-start gap-[80px] lg:grid-cols-[552px_523px]">
         <div>
           <span className="block font-sans text-xs font-bold uppercase tracking-[0.1em] text-brand-rose-500">
             Diferenciais
           </span>
-          <h2 className="mt-[14px] font-display text-[2.8rem] leading-[1.05] tracking-[-0.035em] text-brand-ink lg:text-[54.4px]">
+          <h2
+            className="mt-[14px] font-display text-[2.8rem] leading-[1.05] tracking-[-0.035em] text-brand-ink lg:text-[54.4px]"
+            id="diferenciais-heading"
+          >
             Por que escolher a Dra. Miriam Aguiar para cuidar do seu sorriso.
           </h2>
           <p className="mt-[20px] max-w-[472px] text-base leading-8 text-brand-ink/75">
@@ -27,8 +31,10 @@ export function DifferentialsSection() {
           </p>
           <img
             src={draPhoto}
-            alt="Dra. Miriam Aguiar"
+            alt="Dra. Miriam Aguiar durante atendimento odontológico em Florianópolis"
             className="mt-8 h-[340px] w-[500px] max-w-full rounded-[8px] object-cover object-[center_18%] shadow-[0_20px_46px_rgba(120,72,79,0.12)]"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -44,6 +50,8 @@ export function DifferentialsSection() {
                     src={icons[index]}
                     alt=""
                     className="h-5 w-5 object-contain lg:h-6 lg:w-6"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </span>
                 <div className="min-w-0 flex-1">

@@ -5,13 +5,17 @@ export function ContactSection() {
     <section
       className="scroll-mt-24 bg-brand-rose-400 py-12 text-white lg:py-[52px]"
       id="contato"
+      aria-labelledby="contato-heading"
     >
       <div className="mx-auto grid w-[min(1216px,calc(100vw-32px))] items-center gap-10 lg:grid-cols-[470px_1fr] lg:gap-[88px]">
         <div>
           <span className="block font-sans text-xs font-bold uppercase tracking-[0.1em] text-white/85">
             Contato
           </span>
-          <h2 className="mt-3 max-w-[450px] font-display text-[2.45rem] leading-[1.02] tracking-[-0.035em] lg:text-[44px]">
+          <h2
+            className="mt-3 max-w-[450px] font-display text-[2.45rem] leading-[1.02] tracking-[-0.035em] lg:text-[44px]"
+            id="contato-heading"
+          >
             Agende sua consulta e venha conhecer a clínica da Dra. Miriam
             Aguiar.
           </h2>

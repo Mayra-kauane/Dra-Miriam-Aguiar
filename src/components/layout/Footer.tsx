@@ -99,8 +99,8 @@ export function Footer() {
             Endereço
           </h3>
           <p className="mt-4 max-w-[260px] text-[14px] leading-6 text-brand-ink/70">
-            Rua R. Intendente João Nunes Vieira, 1101 - Sala 07, Ingleses do
-            Rio Vermelho, Florianópolis - SC.
+            Rua Intendente João Nunes Vieira, 1101 - Sala 07, Ingleses do Rio
+            Vermelho, Florianópolis - SC.
           </p>
           <a
             className="mt-3 inline-block text-[14px] font-semibold text-brand-rose-500 transition hover:text-[#ad6a70]"

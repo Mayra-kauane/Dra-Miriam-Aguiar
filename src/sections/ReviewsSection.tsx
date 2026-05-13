@@ -11,7 +11,7 @@ const reviews = [
   {
     name: "Denise Prieto Kappel",
     avatar: review1,
-    text: "Excelente atendimento, da recepção aos profissionais. Dra Miriam atende toda a minha família a 25 anos. Maravilhoso trabalho, carisma e acolhimento.",
+    text: "Excelente atendimento, da recepção aos profissionais. Dra. Miriam atende toda a minha família há 25 anos. Maravilhoso trabalho, carisma e acolhimento.",
   },
   {
     name: "Talita Matos",
@@ -37,13 +37,15 @@ const reviews = [
 
 function Stars() {
   return (
-    <div className="flex justify-center gap-1">
+    <div className="flex justify-center gap-1" aria-label="Avaliação 5 estrelas">
       {Array.from({ length: 5 }).map((_, index) => (
         <img
           key={index}
           src={starIcon}
           alt=""
           className="h-5 w-5 object-contain md:h-6 md:w-6"
+          loading="lazy"
+          decoding="async"
         />
       ))}
     </div>
@@ -118,13 +120,19 @@ export function ReviewsSection() {
   };
 
   return (
-    <section className="bg-brand-rose-400 py-10 lg:min-h-[500px] lg:py-12">
+    <section
+      className="bg-brand-rose-400 py-10 lg:min-h-[500px] lg:py-12"
+      aria-labelledby="avaliacoes-heading"
+    >
       <div className="mx-auto w-[min(1216px,calc(100vw-32px))]">
         <div className="mx-auto max-w-[760px] text-center text-white">
           <span className="block font-sans text-xs font-bold uppercase tracking-[0.1em]">
             Nossas avaliações
           </span>
-          <h2 className="mx-auto mt-3 max-w-[820px] font-display text-[2.25rem] leading-[1.05] tracking-[-0.035em] lg:text-[44px]">
+          <h2
+            className="mx-auto mt-3 max-w-[820px] font-display text-[2.25rem] leading-[1.05] tracking-[-0.035em] lg:text-[44px]"
+            id="avaliacoes-heading"
+          >
             A confiança dos pacientes também faz parte da história da clínica.
           </h2>
           <p className="mx-auto mt-4 max-w-[614px] text-[15px] leading-7">
@@ -144,27 +152,29 @@ export function ReviewsSection() {
                 transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
               }}
             >
-            {loopedReviews.map((review, index) => (
-              <article
-                key={`${review.name}-${index}`}
-                className="min-w-full px-3 pt-10 md:min-w-[50%] md:pt-11 lg:min-w-[33.333%]"
-              >
-                <div className="relative flex h-full flex-col rounded-[16px] bg-white px-5 pb-5 pt-[54px] text-center md:px-6 md:pt-[58px]">
-                  <img
-                    src={review.avatar}
-                    alt={review.name}
-                    className="absolute left-1/2 top-0 h-[76px] w-[76px] -translate-x-1/2 -translate-y-1/2 rounded-full object-cover md:h-[80px] md:w-[80px]"
-                  />
-                  <Stars />
-                  <strong className="mt-3 block text-[16px] leading-6 text-brand-ink">
-                    {review.name}
-                  </strong>
-                  <p className="mt-3 text-[13px] leading-6 text-[#6a6a6a] md:text-[14px]">
-                    “{review.text}”
-                  </p>
-                </div>
-              </article>
-            ))}
+              {loopedReviews.map((review, index) => (
+                <article
+                  key={`${review.name}-${index}`}
+                  className="min-w-full px-3 pt-10 md:min-w-[50%] md:pt-11 lg:min-w-[33.333%]"
+                >
+                  <div className="relative flex h-full flex-col rounded-[16px] bg-white px-5 pb-5 pt-[54px] text-center md:px-6 md:pt-[58px]">
+                    <img
+                      src={review.avatar}
+                      alt={`Foto de ${review.name}`}
+                      className="absolute left-1/2 top-0 h-[76px] w-[76px] -translate-x-1/2 -translate-y-1/2 rounded-full object-cover md:h-[80px] md:w-[80px]"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <Stars />
+                    <strong className="mt-3 block text-[16px] leading-6 text-brand-ink">
+                      {review.name}
+                    </strong>
+                    <p className="mt-3 text-[13px] leading-6 text-[#6a6a6a] md:text-[14px]">
+                      “{review.text}”
+                    </p>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
 

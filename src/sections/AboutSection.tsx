@@ -14,13 +14,17 @@ export function AboutSection() {
     <section
       className="scroll-mt-24 bg-white py-[72px] lg:h-[586px] lg:py-0"
       id="sobre"
+      aria-labelledby="sobre-heading"
     >
       <div className="mx-auto grid h-full w-[min(1216px,calc(100vw-32px))] items-center gap-8 lg:grid-cols-[574px_517px] lg:gap-[123px]">
         <div>
           <span className="block font-sans text-xs font-bold uppercase tracking-[0.1em] text-brand-rose-500">
             Sobre a clínica
           </span>
-          <h2 className="mt-[35px] font-display text-[2.8rem] font-normal leading-[1.05] tracking-[-0.035em] text-brand-ink lg:text-[54.4px]">
+          <h2
+            className="mt-[35px] font-display text-[2.8rem] font-normal leading-[1.05] tracking-[-0.035em] text-brand-ink lg:text-[54.4px]"
+            id="sobre-heading"
+          >
             Sou cirurgiã-dentista e especialista em Implantodontia, com mais de
             30 anos de experiência.
           </h2>

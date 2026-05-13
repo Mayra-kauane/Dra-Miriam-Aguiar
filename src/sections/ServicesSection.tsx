@@ -20,14 +20,18 @@ export function ServicesSection() {
     <section
       className="scroll-mt-24 bg-[#f8f3f1] py-14 lg:py-[58px]"
       id="tratamentos"
+      aria-labelledby="tratamentos-heading"
     >
       <div className="mx-auto w-[min(1216px,calc(100vw-32px))]">
         <div className="mx-auto max-w-[776px] text-center">
           <span className="font-sans text-xs font-bold uppercase tracking-[0.1em] text-brand-rose-500">
             Tratamentos
           </span>
-          <h2 className="mt-[14px] font-display text-[2.65rem] leading-[1.05] tracking-[-0.035em] text-brand-ink lg:text-[54px]">
-            Tratamentos realizados com qualidade, tecnologia e planejamento
+          <h2
+            className="mt-[14px] font-display text-[2.65rem] leading-[1.05] tracking-[-0.035em] text-brand-ink lg:text-[54px]"
+            id="tratamentos-heading"
+          >
+            Tratamentos odontológicos com qualidade, tecnologia e planejamento
             individual.
           </h2>
           <p className="mx-auto mt-4 max-w-[614px] text-[15px] leading-8 text-brand-ink/70">
@@ -46,6 +50,8 @@ export function ServicesSection() {
                 src={icons[index]}
                 alt=""
                 className="mb-6 h-[58px] w-[104px] object-contain"
+                loading="lazy"
+                decoding="async"
               />
               <h3 className="text-[17px] font-bold leading-[25px] text-brand-ink">
                 {service.title}

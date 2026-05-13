@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-import teethIcon from "../assets/figma/icon-teeth.svg";
 import plusIcon from "../assets/figma/icon-plus.svg";
+import teethIcon from "../assets/figma/icon-teeth.svg";
 import whatsappIcon from "../assets/figma/whatsapp.svg";
 
 const questions = [
   {
     title: "Quais tratamentos são realizados na clínica?",
     answer:
-      "Oferecemos tratamentos completos em odontologia estética, reabilitadora, preventiva e funcional. Veja todos os tratamentos na página específica.",
+      "Oferecemos tratamentos completos em odontologia estética, reabilitadora, preventiva e funcional, incluindo implantes, clareamento, facetas, próteses, restaurações, Invisalign, canal e harmonização facial.",
     icon: "tooth",
   },
   {
@@ -85,16 +85,21 @@ export function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="bg-[#f8f3f1] py-12 lg:py-14">
+    <section
+      className="bg-[#f8f3f1] py-12 lg:py-14"
+      aria-labelledby="faq-heading"
+    >
       <div className="mx-auto grid w-[min(1216px,calc(100vw-32px))] items-start gap-8 lg:grid-cols-[360px_1fr]">
         <div>
           <span className="font-sans text-xs font-bold uppercase tracking-[0.1em] text-brand-rose-500">
             Ajuda
           </span>
-          <h2 className="mt-3 font-display text-[2.35rem] leading-[1.05] tracking-[-0.035em] text-brand-ink lg:text-[38px]">
-            Perguntas Frequentes
+          <h2
+            className="mt-3 font-display text-[2.35rem] leading-[1.05] tracking-[-0.035em] text-brand-ink lg:text-[38px]"
+            id="faq-heading"
+          >
+            Perguntas frequentes
           </h2>
-
         </div>
 
         <div className="ml-auto grid w-full max-w-[720px] gap-3">

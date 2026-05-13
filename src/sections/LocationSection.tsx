@@ -6,10 +6,14 @@ export function LocationSection() {
     <section
       className="scroll-mt-24 bg-white py-14 lg:py-20"
       id="localizacao"
+      aria-labelledby="localizacao-heading"
     >
       <div className="mx-auto w-[min(1216px,calc(100vw-32px))]">
         <div className="mx-auto max-w-[640px] text-center">
-          <h2 className="font-display text-[2.35rem] leading-[1.05] tracking-[-0.035em] text-brand-ink lg:text-[44px]">
+          <h2
+            className="font-display text-[2.35rem] leading-[1.05] tracking-[-0.035em] text-brand-ink lg:text-[44px]"
+            id="localizacao-heading"
+          >
             Conheça nosso espaço
           </h2>
           <p className="mx-auto mt-3 max-w-[460px] text-[14px] leading-6 text-brand-ink/70">
@@ -27,8 +31,8 @@ export function LocationSection() {
               Localização
             </span>
             <p className="mt-3 text-[14px] leading-6 text-brand-ink/70">
-              Rua R. Intendente João Nunes Vieira, 1101 - Sala 07, Ingleses do
-              Rio Vermelho, Florianópolis - SC, 88058-100
+              Rua Intendente João Nunes Vieira, 1101 - Sala 07, Ingleses do Rio
+              Vermelho, Florianópolis - SC, 88058-100
             </p>
           </div>
           <div className="h-[320px] lg:h-[388px]">

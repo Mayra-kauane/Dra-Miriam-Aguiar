@@ -1,4 +1,5 @@
 import heroBackground from "../assets/dramiriam2026 (45).jpg";
+
 const imageMask =
   "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.08) 8%, rgba(0,0,0,0.24) 16%, rgba(0,0,0,0.48) 25%, rgba(0,0,0,0.72) 34%, rgba(0,0,0,0.9) 43%, black 52%, black 100%)";
 
@@ -7,8 +8,8 @@ export function HeroSection() {
     <section
       className="relative min-h-[620px] scroll-mt-20 overflow-hidden bg-[#F6E6E2] sm:min-h-[600px] lg:h-[560px] lg:min-h-[560px] lg:scroll-mt-24"
       id="inicio"
+      aria-labelledby="hero-heading"
     >
-      {/* Imagem mobile/tablet */}
       <div
         className="absolute inset-0 bg-cover bg-[68%_center] opacity-70 lg:hidden"
         style={{
@@ -21,10 +22,8 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      {/* Overlay para legibilidade no mobile */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#f3e7e5]/82 via-[#f3e7e5]/68 to-[#f3e7e5]/52 lg:hidden" />
 
-      {/* Imagem desktop com fade lateral */}
       <div
         className="absolute inset-y-0 right-0 hidden h-full w-[62%] overflow-visible lg:block"
         aria-hidden="true"
@@ -33,6 +32,8 @@ export function HeroSection() {
           src={heroBackground}
           alt=""
           className="absolute right-0 top-0 h-full w-auto max-w-none object-contain object-right-top"
+          decoding="async"
+          fetchPriority="high"
           style={{
             WebkitMaskImage: imageMask,
             maskImage: imageMask,
@@ -42,7 +43,10 @@ export function HeroSection() {
 
       <div className="relative mx-auto flex min-h-[620px] w-[min(1224px,calc(100vw-32px))] items-center py-10 sm:min-h-[600px] lg:h-full lg:min-h-0 lg:py-0">
         <div className="w-full max-w-[590px]">
-          <h1 className="max-w-[11ch] font-display text-[2.7rem] font-medium leading-[1.08] tracking-[-0.01em] text-brand-rose-400 sm:max-w-[12ch] sm:text-[3.25rem] lg:max-w-none lg:text-[56px]">
+          <h1
+            className="max-w-[11ch] font-display text-[2.7rem] font-medium leading-[1.08] tracking-[-0.01em] text-brand-rose-400 sm:max-w-[12ch] sm:text-[3.25rem] lg:max-w-none lg:text-[56px]"
+            id="hero-heading"
+          >
             Seu sorriso merece mais do que tratamento, merece excelência.
           </h1>
 
@@ -63,6 +67,8 @@ export function HeroSection() {
             <a
               className="inline-flex h-[52px] w-full items-center justify-center rounded-full bg-[#d28f94] px-7 font-sans text-base font-semibold text-white shadow-[0_18px_32px_rgba(201,131,136,0.24)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#c98388] hover:shadow-[0_22px_42px_rgba(201,131,136,0.32)] active:translate-y-0 active:bg-[#b9757a] sm:w-auto"
               href="https://wa.me/554833693265?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Miriam"
+              target="_blank"
+              rel="noreferrer"
             >
               Agende no WhatsApp
             </a>

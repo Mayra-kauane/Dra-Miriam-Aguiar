@@ -6,7 +6,7 @@ import type {
 } from "../types/content";
 
 export const navItems: NavItem[] = [
-  { label: "Inicio", href: "#inicio" },
+  { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
   { label: "Tratamentos", href: "#tratamentos" },
   { label: "Quem Somos", href: "#equipe" },
@@ -31,7 +31,7 @@ export const services: Service[] = [
       "Restaura dentes danificados, devolvendo função e estética com resistência.",
   },
   {
-    title: "Aparelhos Ortodônticos/invisalign",
+    title: "Aparelhos Ortodônticos / Invisalign",
     description:
       "Alinha os dentes com conforto, discrição e praticidade no tratamento.",
   },
