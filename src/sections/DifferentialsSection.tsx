@@ -1,7 +1,7 @@
 import computerIcon from "../assets/figma/icon-computer.svg";
 import mapHeartIcon from "../assets/figma/icon-map-heart.svg";
 import timeIcon from "../assets/figma/icon-time.svg";
-import draPhoto from "../assets/dramiriam2026 (63).jpg";
+import draPhoto from "../assets/dramiriam2026 (61).jpg";
 import { differentials } from "../data/siteContent";
 
 const icons = [timeIcon, computerIcon, mapHeartIcon];
@@ -36,7 +36,7 @@ export function DifferentialsSection() {
           {differentials.map((item, index) => (
             <article
               key={item.title}
-              className="h-auto rounded-[18px] border border-brand-ink/10 bg-white p-[38px] shadow-[0_24px_60px_rgba(120,72,79,0.14)] lg:h-[229px]"
+              className="flex h-auto flex-col justify-center rounded-[18px] border border-brand-ink/10 bg-white px-[38px] py-8 shadow-[0_24px_60px_rgba(120,72,79,0.14)] lg:h-[190px]"
             >
               <div className="flex items-center gap-[18px]">
                 <img src={icons[index]} alt="" className="h-6 w-6 object-contain" />
