@@ -36,15 +36,26 @@ export function DifferentialsSection() {
           {differentials.map((item, index) => (
             <article
               key={item.title}
-              className="flex h-auto flex-col justify-center rounded-[18px] border border-brand-ink/10 bg-white px-[38px] py-8 shadow-[0_24px_60px_rgba(120,72,79,0.14)] lg:h-[190px]"
+              className="rounded-[18px] border border-brand-ink/10 bg-white px-5 py-5 shadow-[0_24px_60px_rgba(120,72,79,0.14)] lg:flex lg:h-[190px] lg:flex-col lg:justify-center lg:px-[38px] lg:py-8"
             >
-              <div className="flex items-center gap-[18px]">
-                <img src={icons[index]} alt="" className="h-6 w-6 object-contain" />
-                <h3 className="text-[24px] font-bold leading-[29px] text-brand-ink">
-                  {item.title}
-                </h3>
+              <div className="flex items-start gap-4 lg:items-center lg:gap-[18px]">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#f7e9e7]">
+                  <img
+                    src={icons[index]}
+                    alt=""
+                    className="h-5 w-5 object-contain lg:h-6 lg:w-6"
+                  />
+                </span>
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-[18px] font-bold leading-[24px] text-brand-ink lg:text-[24px] lg:leading-[29px]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-[15px] leading-7 text-[#6a6a6a] lg:hidden">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-              <p className="mt-[18px] text-[16px] leading-[27px] text-[#6a6a6a]">
+              <p className="mt-[18px] hidden text-[16px] leading-[27px] text-[#6a6a6a] lg:block">
                 {item.description}
               </p>
             </article>

@@ -47,16 +47,16 @@ export function HeroSection() {
             resultados de excelência.
           </p>
 
-          <div className="mt-7 flex max-w-[320px] flex-col gap-3 sm:max-w-none sm:flex-row sm:flex-wrap">
+          <div className="mx-auto mt-7 flex w-full max-w-[290px] flex-col items-center gap-3 sm:mx-0 sm:max-w-none sm:flex-row sm:flex-wrap sm:items-start">
             <a
-              className="inline-flex h-[52px] items-center justify-center rounded-full border border-white bg-white px-7 font-sans text-base font-semibold text-brand-ink shadow-[0_14px_30px_rgba(126,91,76,0.1)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#fff8f6] hover:text-brand-rose-500 hover:shadow-[0_18px_36px_rgba(126,91,76,0.16)] active:translate-y-0 active:bg-[#f5e2df]"
+              className="inline-flex h-[52px] w-full items-center justify-center rounded-full border border-white bg-white px-7 font-sans text-base font-semibold text-brand-ink shadow-[0_14px_30px_rgba(126,91,76,0.1)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#fff8f6] hover:text-brand-rose-500 hover:shadow-[0_18px_36px_rgba(126,91,76,0.16)] active:translate-y-0 active:bg-[#f5e2df] sm:w-auto"
               href="#tratamentos"
             >
               Ver tratamentos
             </a>
 
             <a
-              className="inline-flex h-[52px] items-center justify-center rounded-full bg-[#d28f94] px-7 font-sans text-base font-semibold text-white shadow-[0_18px_32px_rgba(201,131,136,0.24)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#c98388] hover:shadow-[0_22px_42px_rgba(201,131,136,0.32)] active:translate-y-0 active:bg-[#b9757a]"
+              className="inline-flex h-[52px] w-full items-center justify-center rounded-full bg-[#d28f94] px-7 font-sans text-base font-semibold text-white shadow-[0_18px_32px_rgba(201,131,136,0.24)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#c98388] hover:shadow-[0_22px_42px_rgba(201,131,136,0.32)] active:translate-y-0 active:bg-[#b9757a] sm:w-auto"
               href="https://wa.me/554833693265"
             >
               Agende no WhatsApp

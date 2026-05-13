@@ -19,12 +19,6 @@ export function ContactSection() {
             Entre em contato pelo WhatsApp ou telefone para receber orientações,
             agendar seu atendimento e iniciar o seu planejamento odontológico.
           </p>
-          <a
-            className="mt-6 inline-flex h-[46px] items-center justify-center rounded-full bg-white px-6 font-sans text-sm font-semibold text-brand-rose-500 shadow-[0_18px_32px_rgba(120,72,79,0.12)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#fff4f1] hover:text-[#bd797d] active:translate-y-0 active:bg-[#f4dfdc]"
-            href="https://wa.me/554833693265"
-          >
-            Agendar pelo WhatsApp
-          </a>
         </div>
 
         <div className="grid w-full max-w-[540px] gap-4 lg:justify-self-end">

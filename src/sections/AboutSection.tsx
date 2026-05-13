@@ -11,7 +11,7 @@ export function AboutSection() {
       className="scroll-mt-24 bg-white py-[72px] lg:h-[586px] lg:py-0"
       id="sobre"
     >
-      <div className="mx-auto grid h-full w-[min(1216px,calc(100vw-32px))] items-center gap-[123px] lg:grid-cols-[574px_517px]">
+      <div className="mx-auto grid h-full w-[min(1216px,calc(100vw-32px))] items-center gap-8 lg:grid-cols-[574px_517px] lg:gap-[123px]">
         <div>
           <span className="block font-sans text-xs font-bold uppercase tracking-[0.1em] text-brand-rose-500">
             Sobre a clínica

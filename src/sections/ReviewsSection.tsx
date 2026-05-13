@@ -51,7 +51,8 @@ function Stars() {
 }
 
 export function ReviewsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [transitionEnabled, setTransitionEnabled] = useState(true);
   const [visibleCards, setVisibleCards] = useState(1);
 
   useEffect(() => {
@@ -75,21 +76,45 @@ export function ReviewsSection() {
     return () => window.removeEventListener("resize", updateVisibleCards);
   }, []);
 
-  const maxIndex = useMemo(
-    () => Math.max(reviews.length - visibleCards, 0),
+  const loopedReviews = useMemo(
+    () => [
+      ...reviews.slice(-visibleCards),
+      ...reviews,
+      ...reviews.slice(0, visibleCards),
+    ],
     [visibleCards],
   );
 
+  const resetCarouselPosition = (index: number) => {
+    setTransitionEnabled(false);
+    setCurrentIndex(index);
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => setTransitionEnabled(true));
+    });
+  };
+
   useEffect(() => {
-    setCurrentIndex((index) => Math.min(index, maxIndex));
-  }, [maxIndex]);
+    resetCarouselPosition(visibleCards);
+  }, [visibleCards]);
 
   const previousReview = () => {
-    setCurrentIndex((index) => (index === 0 ? maxIndex : index - 1));
+    setCurrentIndex((index) => index - 1);
   };
 
   const nextReview = () => {
-    setCurrentIndex((index) => (index >= maxIndex ? 0 : index + 1));
+    setCurrentIndex((index) => index + 1);
+  };
+
+  const handleTransitionEnd = () => {
+    if (currentIndex >= reviews.length + visibleCards) {
+      resetCarouselPosition(visibleCards);
+      return;
+    }
+
+    if (currentIndex < visibleCards) {
+      resetCarouselPosition(reviews.length + currentIndex);
+    }
   };
 
   return (
@@ -110,14 +135,17 @@ export function ReviewsSection() {
 
         <div className="relative mt-8 overflow-hidden pb-1 pt-4 lg:mt-9 lg:pt-5">
           <div
-            className="flex items-stretch transition-transform duration-500 ease-out"
+            className={`flex items-stretch ${
+              transitionEnabled ? "transition-transform duration-500 ease-out" : ""
+            }`}
+            onTransitionEnd={handleTransitionEnd}
             style={{
               transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
             }}
           >
-            {reviews.map((review) => (
+            {loopedReviews.map((review, index) => (
               <article
-                key={review.name}
+                key={`${review.name}-${index}`}
                 className="min-w-full px-3 pt-10 md:min-w-[50%] md:pt-11 lg:min-w-[33.333%]"
               >
                 <div className="relative flex h-full flex-col rounded-[16px] bg-white px-5 pb-5 pt-[54px] text-center md:px-6 md:pt-[58px]">
@@ -127,12 +155,12 @@ export function ReviewsSection() {
                     className="absolute left-1/2 top-0 h-[76px] w-[76px] -translate-x-1/2 -translate-y-1/2 rounded-full object-cover md:h-[80px] md:w-[80px]"
                   />
                   <Stars />
+                  <strong className="mt-3 block text-[16px] leading-6 text-brand-ink">
+                    {review.name}
+                  </strong>
                   <p className="mt-3 text-[13px] leading-6 text-[#6a6a6a] md:text-[14px]">
                     “{review.text}”
                   </p>
-                  <strong className="mt-3 block text-[16px] leading-6 text-brand-ink">
-                    “{review.name}”
-                  </strong>
                 </div>
               </article>
             ))}
