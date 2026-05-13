@@ -27,11 +27,11 @@ export function ContactSection() {
           </a>
         </div>
 
-        <div className="grid gap-4">
+        <div className="grid w-full max-w-[540px] gap-4 lg:justify-self-end">
           {contactCards.map((card) => (
             <article
               key={card.title}
-              className="rounded-[18px] bg-[#fbf0ee] px-7 py-6 text-brand-ink shadow-[0_18px_42px_rgba(120,72,79,0.12)]"
+              className="rounded-[18px] bg-[#fbf0ee] px-6 py-5 text-brand-ink shadow-[0_18px_42px_rgba(120,72,79,0.12)]"
             >
               <span className="block text-xs font-bold uppercase tracking-[0.1em] text-brand-rose-500">
                 {card.title}
