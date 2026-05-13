@@ -85,7 +85,7 @@ export function TeamSection() {
 
   return (
     <section
-      className="scroll-mt-24 bg-brand-rose-400 py-12 text-white md:py-14 lg:min-h-[760px]"
+      className="scroll-mt-24 bg-brand-rose-400 py-12 text-white md:py-14 lg:min-h-[700px]"
       id="equipe"
     >
       <div className="relative mx-auto w-[min(1216px,calc(100vw-32px))]">
@@ -100,7 +100,7 @@ export function TeamSection() {
 
         <div className="relative mt-10 overflow-hidden md:mt-11">
           <div
-            className="flex transition-transform duration-500 ease-out"
+            className="flex items-stretch transition-transform duration-500 ease-out"
             style={{
               transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
             }}
@@ -110,17 +110,17 @@ export function TeamSection() {
                 key={`${member.name}-${index}`}
                 className="min-w-full px-[9px] md:min-w-[50%] xl:min-w-[25%]"
               >
-                <div className="h-full rounded-[18px] border border-white/40 bg-[#fffaf7] p-[15px] text-brand-ink shadow-[0_18px_42px_rgba(120,72,79,0.14)]">
+                <div className="h-full rounded-[18px] bg-[#fffaf7] p-[12px] text-brand-ink">
                   <div className="relative overflow-hidden rounded-[14px] bg-[#f3ebe6]">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="h-[306px] w-full object-cover object-top brightness-[0.94] contrast-[1.06] saturate-[0.92]"
+                      className="h-[236px] w-full object-cover object-top brightness-[0.94] contrast-[1.06] saturate-[0.92] md:h-[286px] xl:h-[306px]"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(95,74,77,0.06),transparent_42%,rgba(95,74,77,0.08))]" />
                   </div>
 
-                  <div className="mt-[22px]">
+                  <div className="px-1 pb-3 pt-4">
                     <div className="flex items-center gap-2">
                       <img
                         src={teethIcon}
@@ -141,7 +141,7 @@ export function TeamSection() {
           </div>
 
           <button
-            className="absolute left-2 top-[230px] flex h-10 w-10 items-center justify-center rounded-full bg-white text-2xl leading-none text-brand-rose-500 shadow-[0_12px_24px_rgba(120,72,79,0.18)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#fff4f1] hover:text-[#bd797d] active:translate-y-0 active:bg-[#f4dfdc] md:left-5"
+            className="absolute left-0 top-[110px] flex h-10 w-10 items-center justify-center rounded-full bg-white text-2xl leading-none text-brand-rose-500 shadow-[0_12px_24px_rgba(120,72,79,0.18)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#fff4f1] hover:text-[#bd797d] active:translate-y-0 active:bg-[#f4dfdc] md:left-4 md:top-[135px] xl:top-[145px]"
             aria-label="Equipe anterior"
             type="button"
             onClick={previousTeam}
@@ -149,7 +149,7 @@ export function TeamSection() {
             ‹
           </button>
           <button
-            className="absolute right-2 top-[230px] flex h-10 w-10 items-center justify-center rounded-full bg-white text-2xl leading-none text-brand-rose-500 shadow-[0_12px_24px_rgba(120,72,79,0.18)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#fff4f1] hover:text-[#bd797d] active:translate-y-0 active:bg-[#f4dfdc] md:right-5"
+            className="absolute right-0 top-[110px] flex h-10 w-10 items-center justify-center rounded-full bg-white text-2xl leading-none text-brand-rose-500 shadow-[0_12px_24px_rgba(120,72,79,0.18)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#fff4f1] hover:text-[#bd797d] active:translate-y-0 active:bg-[#f4dfdc] md:right-4 md:top-[135px] xl:top-[145px]"
             aria-label="Próxima equipe"
             type="button"
             onClick={nextTeam}
