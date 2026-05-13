@@ -1,5 +1,4 @@
-import heroBackground from "../assets/dramiriam2026 (50) semcai.jpg";
-
+import heroBackground from "../assets/dramiriam2026 (45).jpg";
 const imageMask =
   "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.08) 8%, rgba(0,0,0,0.24) 16%, rgba(0,0,0,0.48) 25%, rgba(0,0,0,0.72) 34%, rgba(0,0,0,0.9) 43%, black 52%, black 100%)";
 
