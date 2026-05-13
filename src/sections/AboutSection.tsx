@@ -26,8 +26,7 @@ export function AboutSection() {
           </h2>
           <p className="mt-[35px] text-base leading-8 text-brand-ink/75">
             Estou em constante aprimoramento e evolução para oferecer sempre o
-            melhor tratamento odontológico e atendimento aos meus pacientes no
-            Norte da Ilha.
+            melhor tratamento odontológico e atendimento aos meus pacientes.
           </p>
         </div>
 

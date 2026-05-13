@@ -133,16 +133,17 @@ export function ReviewsSection() {
           </p>
         </div>
 
-        <div className="relative mt-8 overflow-hidden pb-1 pt-4 lg:mt-9 lg:pt-5">
-          <div
-            className={`flex items-stretch ${
-              transitionEnabled ? "transition-transform duration-500 ease-out" : ""
-            }`}
-            onTransitionEnd={handleTransitionEnd}
-            style={{
-              transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
-            }}
-          >
+        <div className="relative mt-8 pt-4 lg:mt-9 lg:pt-5">
+          <div className="overflow-hidden pb-1">
+            <div
+              className={`flex items-stretch ${
+                transitionEnabled ? "transition-transform duration-500 ease-out" : ""
+              }`}
+              onTransitionEnd={handleTransitionEnd}
+              style={{
+                transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
+              }}
+            >
             {loopedReviews.map((review, index) => (
               <article
                 key={`${review.name}-${index}`}
@@ -164,10 +165,11 @@ export function ReviewsSection() {
                 </div>
               </article>
             ))}
+            </div>
           </div>
 
           <button
-            className="absolute left-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-[#fff7f5] text-2xl leading-none text-[#9f5960] transition duration-200 hover:bg-[#f4dfdc] hover:text-[#7f4248] active:bg-[#ead0cc]"
+            className="absolute -left-1 top-[64%] z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[#fff7f5] text-2xl leading-none text-[#9f5960] shadow-[0_12px_24px_rgba(120,72,79,0.16)] transition duration-200 hover:bg-[#f4dfdc] hover:text-[#7f4248] active:bg-[#ead0cc] md:-left-3 lg:-left-5 xl:-left-7"
             aria-label="Avaliação anterior"
             type="button"
             onClick={previousReview}
@@ -175,7 +177,7 @@ export function ReviewsSection() {
             ‹
           </button>
           <button
-            className="absolute right-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-[#fff7f5] text-2xl leading-none text-[#9f5960] transition duration-200 hover:bg-[#f4dfdc] hover:text-[#7f4248] active:bg-[#ead0cc]"
+            className="absolute -right-1 top-[64%] z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[#fff7f5] text-2xl leading-none text-[#9f5960] shadow-[0_12px_24px_rgba(120,72,79,0.16)] transition duration-200 hover:bg-[#f4dfdc] hover:text-[#7f4248] active:bg-[#ead0cc] md:-right-3 lg:-right-5 xl:-right-7"
             aria-label="Próxima avaliação"
             type="button"
             onClick={nextReview}

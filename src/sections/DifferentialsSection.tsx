@@ -12,7 +12,7 @@ export function DifferentialsSection() {
       className="scroll-mt-24 bg-white py-[72px] lg:min-h-[714px]"
       id="diferenciais"
     >
-      <div className="mx-auto grid w-[min(1216px,calc(100vw-32px))] items-center gap-[80px] lg:grid-cols-[552px_523px]">
+      <div className="mx-auto grid w-[min(1216px,calc(100vw-32px))] items-start gap-[80px] lg:grid-cols-[552px_523px]">
         <div>
           <span className="block font-sans text-xs font-bold uppercase tracking-[0.1em] text-brand-rose-500">
             Diferenciais
@@ -32,7 +32,7 @@ export function DifferentialsSection() {
           />
         </div>
 
-        <div className="grid gap-6">
+        <div className="grid gap-6 lg:mt-[30px] lg:flex lg:h-[659px] lg:flex-col lg:justify-between lg:gap-0">
           {differentials.map((item, index) => (
             <article
               key={item.title}

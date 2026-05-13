@@ -26,14 +26,19 @@ export function HeroSection() {
 
       {/* Imagem desktop com fade lateral */}
       <div
-        className="absolute inset-y-0 right-0 hidden h-full w-[62%] bg-cover bg-right lg:block"
-        style={{
-          backgroundImage: `url("${heroBackground}")`,
-          WebkitMaskImage: imageMask,
-          maskImage: imageMask,
-        }}
+        className="absolute inset-y-0 right-0 hidden h-full w-[62%] overflow-visible lg:block"
         aria-hidden="true"
-      />
+      >
+        <img
+          src={heroBackground}
+          alt=""
+          className="absolute right-0 top-0 h-full w-auto max-w-none object-contain object-right-top"
+          style={{
+            WebkitMaskImage: imageMask,
+            maskImage: imageMask,
+          }}
+        />
+      </div>
 
       <div className="relative mx-auto flex min-h-[620px] w-[min(1224px,calc(100vw-32px))] items-center py-10 sm:min-h-[600px] lg:h-full lg:min-h-0 lg:py-0">
         <div className="w-full max-w-[590px]">
