@@ -4,9 +4,12 @@ import { FloatingWhatsAppButton } from "../components/ui/FloatingWhatsAppButton"
 import { AboutSection } from "../sections/AboutSection";
 import { ContactSection } from "../sections/ContactSection";
 import { DifferentialsSection } from "../sections/DifferentialsSection";
+import { FaqSection } from "../sections/FaqSection";
 import { HeroSection } from "../sections/HeroSection";
+import { LocationSection } from "../sections/LocationSection";
 import { ReviewsSection } from "../sections/ReviewsSection";
 import { ServicesSection } from "../sections/ServicesSection";
+import { TeamSection } from "../sections/TeamSection";
 
 export function HomePage() {
   return (
@@ -15,10 +18,13 @@ export function HomePage() {
       <main>
         <HeroSection />
         <AboutSection />
+        <TeamSection />
         <ServicesSection />
         <DifferentialsSection />
         <ReviewsSection />
+        <FaqSection />
         <ContactSection />
+        <LocationSection />
       </main>
       <Footer />
       <FloatingWhatsAppButton />
