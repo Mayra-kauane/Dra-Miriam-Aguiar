@@ -115,7 +115,7 @@ export function TeamSection() {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="h-[272px] w-full object-cover object-top brightness-[0.94] contrast-[1.06] saturate-[0.92] md:h-[286px] xl:h-[306px]"
+                      className="h-[330px] w-full object-cover object-[center_18%] brightness-[0.94] contrast-[1.06] saturate-[0.92] md:h-[286px] md:object-top xl:h-[306px]"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(95,74,77,0.06),transparent_42%,rgba(95,74,77,0.08))]" />
                   </div>
@@ -141,7 +141,7 @@ export function TeamSection() {
           </div>
 
           <button
-            className="absolute left-0 top-[128px] flex h-10 w-10 items-center justify-center rounded-full bg-white text-2xl leading-none text-brand-rose-500 shadow-[0_12px_24px_rgba(120,72,79,0.18)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#fff4f1] hover:text-[#bd797d] active:translate-y-0 active:bg-[#f4dfdc] md:left-4 md:top-[135px] xl:top-[145px]"
+            className="absolute left-0 top-[157px] flex h-10 w-10 items-center justify-center rounded-full bg-white text-2xl leading-none text-brand-rose-500 shadow-[0_12px_24px_rgba(120,72,79,0.18)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#fff4f1] hover:text-[#bd797d] active:translate-y-0 active:bg-[#f4dfdc] md:left-4 md:top-[135px] xl:top-[145px]"
             aria-label="Equipe anterior"
             type="button"
             onClick={previousTeam}
@@ -149,7 +149,7 @@ export function TeamSection() {
             ‹
           </button>
           <button
-            className="absolute right-0 top-[128px] flex h-10 w-10 items-center justify-center rounded-full bg-white text-2xl leading-none text-brand-rose-500 shadow-[0_12px_24px_rgba(120,72,79,0.18)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#fff4f1] hover:text-[#bd797d] active:translate-y-0 active:bg-[#f4dfdc] md:right-4 md:top-[135px] xl:top-[145px]"
+            className="absolute right-0 top-[157px] flex h-10 w-10 items-center justify-center rounded-full bg-white text-2xl leading-none text-brand-rose-500 shadow-[0_12px_24px_rgba(120,72,79,0.18)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#fff4f1] hover:text-[#bd797d] active:translate-y-0 active:bg-[#f4dfdc] md:right-4 md:top-[135px] xl:top-[145px]"
             aria-label="Próxima equipe"
             type="button"
             onClick={nextTeam}
