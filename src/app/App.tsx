@@ -22,17 +22,21 @@ export function App() {
 
       const url = new URL(link.href);
 
-      if (url.origin !== window.location.origin || !(url.pathname in sectionRoutes)) {
+      const pathname = url.pathname.length > 1 && url.pathname.endsWith("/")
+        ? url.pathname.slice(0, -1)
+        : url.pathname;
+
+      if (url.origin !== window.location.origin || !(pathname in sectionRoutes)) {
         return;
       }
 
       event.preventDefault();
 
-      if (window.location.pathname !== url.pathname) {
-        window.history.pushState(null, "", url.pathname);
+      if (window.location.pathname !== pathname) {
+        window.history.pushState(null, "", pathname);
       }
 
-      scrollToSection(url.pathname);
+      scrollToSection(pathname);
     };
 
     const handlePopState = () => scrollCurrentRoute();
