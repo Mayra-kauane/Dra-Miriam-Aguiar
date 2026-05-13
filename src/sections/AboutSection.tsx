@@ -2,7 +2,11 @@ import checkIcon from "../assets/figma/icon-check.svg";
 import dashboardIcon from "../assets/figma/icon-dashboard.svg";
 
 function CardIcon({ src }: { src: string }) {
-  return <img src={src} alt="" className="h-6 w-6 object-contain" />;
+  return (
+    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#f7e9e7]">
+      <img src={src} alt="" className="h-5 w-5 object-contain" />
+    </span>
+  );
 }
 
 export function AboutSection() {
@@ -27,28 +31,41 @@ export function AboutSection() {
           </p>
         </div>
 
-        <div className="grid gap-[30px]">
-          <article className="rounded-[24px] border border-brand-ink/10 bg-white/75 p-[29px] shadow-[0_24px_60px_rgba(120,72,79,0.14)]">
-            <div className="flex items-center gap-4">
+        <div className="grid gap-4 lg:gap-[30px]">
+          <article className="rounded-[18px] border border-brand-ink/10 bg-white px-5 py-5 shadow-[0_18px_42px_rgba(120,72,79,0.1)] lg:rounded-[24px] lg:p-[29px]">
+            <div className="flex items-start gap-4 lg:items-center">
               <CardIcon src={checkIcon} />
-              <h3 className="text-[20px] font-bold leading-[29px] text-brand-ink">
-                Compromisso com excelência
-              </h3>
+              <div>
+                <h3 className="text-[18px] font-bold leading-[24px] text-brand-ink lg:text-[20px] lg:leading-[29px]">
+                  Compromisso com excelência
+                </h3>
+                <p className="mt-2 text-[15px] leading-7 text-brand-ink/75 lg:hidden">
+                  Meu compromisso é sempre entregar o melhor tratamento
+                  odontológico e um atendimento próximo, humano e acolhedor.
+                </p>
+              </div>
             </div>
-            <p className="mt-4 text-base leading-8 text-brand-ink/75">
+            <p className="mt-4 hidden text-base leading-8 text-brand-ink/75 lg:block">
               Meu compromisso é sempre entregar o melhor tratamento odontológico
               e um atendimento próximo, humano e acolhedor.
             </p>
           </article>
 
-          <article className="rounded-[24px] border border-brand-ink/10 bg-white/75 p-[30px] shadow-[0_24px_60px_rgba(120,72,79,0.14)]">
-            <div className="flex items-center gap-4">
+          <article className="rounded-[18px] border border-brand-ink/10 bg-white px-5 py-5 shadow-[0_18px_42px_rgba(120,72,79,0.1)] lg:rounded-[24px] lg:p-[30px]">
+            <div className="flex items-start gap-4 lg:items-center">
               <CardIcon src={dashboardIcon} />
-              <h3 className="text-[20px] font-bold leading-[29px] text-brand-ink">
-                Evolução constante
-              </h3>
+              <div>
+                <h3 className="text-[18px] font-bold leading-[24px] text-brand-ink lg:text-[20px] lg:leading-[29px]">
+                  Evolução constante
+                </h3>
+                <p className="mt-2 text-[15px] leading-7 text-brand-ink/75 lg:hidden">
+                  Cada paciente recebe um cuidado atualizado, com conhecimento
+                  técnico, atenção aos detalhes e busca contínua pelos melhores
+                  resultados.
+                </p>
+              </div>
             </div>
-            <p className="mt-4 text-base leading-8 text-brand-ink/75">
+            <p className="mt-4 hidden text-base leading-8 text-brand-ink/75 lg:block">
               Cada paciente recebe um cuidado atualizado, com conhecimento
               técnico, atenção aos detalhes e busca contínua pelos melhores
               resultados.

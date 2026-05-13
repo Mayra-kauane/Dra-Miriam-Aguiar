@@ -171,7 +171,7 @@ export function FaqSection() {
               </div>
               <a
                 className="inline-flex h-10 shrink-0 items-center justify-center rounded-[8px] bg-brand-rose-500 px-5 font-sans text-[14px] font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[#bd797d] active:translate-y-0"
-                href="https://wa.me/554833693265"
+                href="https://wa.me/554833693265?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Miriam"
                 target="_blank"
                 rel="noreferrer"
               >

@@ -92,7 +92,7 @@ export function Header() {
 
           <a
             className="ml-auto inline-flex h-11 items-center gap-2 rounded-full bg-white px-5 font-sans text-sm font-semibold text-brand-rose-400 shadow-[0_18px_18px_rgba(201,131,136,0.22)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#fff3f0] hover:text-[#bd797d] hover:shadow-[0_20px_32px_rgba(201,131,136,0.28)] active:translate-y-0 active:bg-[#f4dfdc] active:text-[#ad6a70] lg:ml-2"
-            href="https://wa.me/554833693265"
+            href="https://wa.me/554833693265?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Miriam"
           >
             <HeaderWhatsAppIcon className="h-4 w-4" />
             Agendar

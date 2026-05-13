@@ -57,7 +57,7 @@ export function HeroSection() {
 
             <a
               className="inline-flex h-[52px] w-full items-center justify-center rounded-full bg-[#d28f94] px-7 font-sans text-base font-semibold text-white shadow-[0_18px_32px_rgba(201,131,136,0.24)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#c98388] hover:shadow-[0_22px_42px_rgba(201,131,136,0.32)] active:translate-y-0 active:bg-[#b9757a] sm:w-auto"
-              href="https://wa.me/554833693265"
+              href="https://wa.me/554833693265?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Miriam"
             >
               Agende no WhatsApp
             </a>
