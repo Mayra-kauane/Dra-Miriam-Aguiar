@@ -23,7 +23,7 @@ export function ServicesSection() {
       aria-labelledby="tratamentos-heading"
     >
       <div className="mx-auto w-[min(1216px,calc(100vw-32px))]">
-        <div className="mx-auto max-w-[776px] text-center">
+        <div className="mx-auto max-w-[776px] text-left md:text-center">
           <span className="font-sans text-xs font-bold uppercase tracking-[0.1em] text-brand-rose-500">
             Tratamentos
           </span>

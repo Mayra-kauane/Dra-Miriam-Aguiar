@@ -125,7 +125,7 @@ export function ReviewsSection() {
       aria-labelledby="avaliacoes-heading"
     >
       <div className="mx-auto w-[min(1216px,calc(100vw-32px))]">
-        <div className="mx-auto max-w-[760px] text-center text-white">
+        <div className="mx-auto max-w-[760px] text-left text-white md:text-center">
           <span className="block font-sans text-xs font-bold uppercase tracking-[0.1em]">
             Nossas avaliações
           </span>

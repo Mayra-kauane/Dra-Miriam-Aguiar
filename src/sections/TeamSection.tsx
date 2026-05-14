@@ -115,7 +115,7 @@ export function TeamSection() {
       aria-labelledby="equipe-heading"
     >
       <div className="relative mx-auto w-[min(1216px,calc(100vw-32px))]">
-        <div className="text-center">
+        <div className="text-left md:text-center">
           <span className="block font-sans text-xs font-bold uppercase tracking-[0.1em]">
             Nossa equipe
           </span>
