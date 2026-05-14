@@ -20,10 +20,19 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   body {
     @apply m-0 bg-white font-sans text-brand-ink antialiased;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  #root {
+    width: 100%;
+    overflow-x: hidden;
   }
 
   * {

@@ -49,7 +49,7 @@ const accessItems = [
   },
   {
     title: "Atendimento",
-    text: "Seg a Sex: 8h às 19h Sab: 8h às 12h",
+    text: "Segunda a sexta, 09h às 12h e 13h30 às 17h30",
     icon: "clock",
   },
 ];
