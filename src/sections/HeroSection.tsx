@@ -1,4 +1,5 @@
 import heroBackground from "../assets/dramiriam2026 (45).jpg";
+import { trackWhatsAppClick } from "../lib/analytics";
 
 const imageMask =
   "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.08) 8%, rgba(0,0,0,0.24) 16%, rgba(0,0,0,0.48) 25%, rgba(0,0,0,0.72) 34%, rgba(0,0,0,0.9) 43%, black 52%, black 100%)";
@@ -69,6 +70,7 @@ export function HeroSection() {
               href="https://wa.me/554833693265?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Miriam"
               target="_blank"
               rel="noreferrer"
+              onClick={trackWhatsAppClick}
             >
               Agende no WhatsApp
             </a>

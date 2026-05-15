@@ -3,6 +3,7 @@ import { useState } from "react";
 import plusIcon from "../assets/figma/icon-plus.svg";
 import teethIcon from "../assets/figma/icon-teeth.svg";
 import whatsappIcon from "../assets/figma/whatsapp.svg";
+import { trackWhatsAppClick } from "../lib/analytics";
 
 const questions = [
   {
@@ -179,6 +180,7 @@ export function FaqSection() {
                 href="https://wa.me/554833693265?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Miriam"
                 target="_blank"
                 rel="noreferrer"
+                onClick={trackWhatsAppClick}
               >
                 Falar no WhatsApp
               </a>

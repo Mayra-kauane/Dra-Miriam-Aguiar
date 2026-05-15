@@ -3,6 +3,7 @@ import headerLogo from "../../assets/figma/header-logo.png";
 import instagramIcon from "../../assets/figma/instagram.svg";
 import whatsappIcon from "../../assets/figma/whatsapp.svg";
 import { navItems } from "../../data/siteContent";
+import { trackWhatsAppClick } from "../../lib/analytics";
 
 function SocialIcon({
   label,
@@ -96,6 +97,7 @@ export function Header() {
             href="https://wa.me/554833693265?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Miriam"
             target="_blank"
             rel="noreferrer"
+            onClick={trackWhatsAppClick}
           >
             <HeaderWhatsAppIcon className="h-4 w-4" />
             Agendar
