@@ -44,6 +44,9 @@ export function Footer() {
               mask: `url("${footerLogo}") left center / contain no-repeat`,
             }}
           />
+          <strong className="mt-3 block max-w-[280px] text-[14px] font-bold leading-6 text-brand-rose-500">
+            Dentista nos Ingleses - Florianópolis
+          </strong>
           <p className="mt-4 max-w-[280px] text-[14px] leading-6 text-brand-ink/70">
             Atendimento odontológico acolhedor, especializado e planejado para
             cuidar do seu sorriso.
@@ -108,6 +111,17 @@ export function Footer() {
           >
             Ver localização
           </a>
+          <div className="mt-8">
+            <h3 className="text-xs font-bold uppercase tracking-[0.1em] text-brand-rose-500">
+              Telefone
+            </h3>
+            <a
+              className="mt-4 block text-[14px] font-semibold text-brand-ink/70 transition hover:text-brand-rose-500"
+              href="tel:+554833693265"
+            >
+              (48) 3369-3265
+            </a>
+          </div>
         </div>
       </div>
 

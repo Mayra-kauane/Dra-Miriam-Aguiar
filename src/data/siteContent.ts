@@ -21,9 +21,14 @@ export const services: Service[] = [
       "Recupera dentes perdidos com função, estética e segurança de forma duradoura.",
   },
   {
-    title: "Clareamento Dental / Facetas",
+    title: "Clareamento Dental",
     description:
-      "Sorriso mais branco e alinhado, com estética refinada e resultado natural.",
+      "Clareia o sorriso com cuidado, segurança e resultado natural.",
+  },
+  {
+    title: "Facetas de Porcelana / Facetas de Resina",
+    description:
+      "Corrige forma, cor e pequenas imperfeições para um sorriso mais harmônico.",
   },
   {
     title: "Prótese / Restaurações Dentárias",
@@ -31,7 +36,7 @@ export const services: Service[] = [
       "Restaura dentes danificados, devolvendo função e estética com resistência.",
   },
   {
-    title: "Aparelhos Ortodônticos / Invisalign",
+    title: "Aparelhos Ortodônticos / Alinhador Invisível - Invisalign",
     description:
       "Alinha os dentes com conforto, discrição e praticidade no tratamento.",
   },

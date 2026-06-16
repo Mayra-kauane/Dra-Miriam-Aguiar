@@ -1,4 +1,5 @@
 import heroBackground from "../assets/dramiriam2026 (45).jpg";
+import { HeaderWhatsAppIcon } from "../components/layout/Header";
 import { trackWhatsAppClick } from "../lib/analytics";
 
 const imageMask =
@@ -44,8 +45,19 @@ export function HeroSection() {
 
       <div className="relative mx-auto flex min-h-[620px] w-[min(1224px,calc(100vw-32px))] items-center py-10 sm:min-h-[600px] lg:h-full lg:min-h-0 lg:py-0">
         <div className="w-full max-w-[590px]">
+          <p className="mb-4 inline-flex max-w-[30ch] items-center justify-center gap-1.5 rounded-full border border-brand-rose-200 bg-white/55 px-3.5 py-1.5 text-center font-sans text-[13px] font-bold text-brand-rose-500 shadow-[0_10px_24px_rgba(126,91,76,0.08)] sm:max-w-[34ch] sm:text-[14px] lg:max-w-[520px]">
+            <svg
+              aria-hidden="true"
+              className="h-3.5 w-3.5 shrink-0 fill-current"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2.75a7.25 7.25 0 0 0-7.25 7.25c0 4.96 6.24 10.77 6.5 11.02a1.1 1.1 0 0 0 1.5 0c.26-.25 6.5-6.06 6.5-11.02A7.25 7.25 0 0 0 12 2.75Zm0 9.75a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
+            </svg>
+            Dentista nos Ingleses - Florianópolis
+          </p>
+
           <h1
-            className="max-w-[11ch] font-display text-[2.7rem] font-medium leading-[1.08] tracking-[-0.01em] text-brand-rose-400 sm:max-w-[12ch] sm:text-[3.25rem] lg:max-w-none lg:text-[56px]"
+            className="max-w-[11ch] font-display text-[2.7rem] font-medium leading-[1.08] tracking-[-0.01em] text-[#b9757a] sm:max-w-[12ch] sm:text-[3.25rem] lg:max-w-none lg:text-[56px]"
             id="hero-heading"
           >
             Seu sorriso merece mais do que tratamento, merece excelência.
@@ -63,15 +75,29 @@ export function HeroSection() {
               href="/tratamentos"
             >
               Ver tratamentos
+              <svg
+                aria-hidden="true"
+                className="ml-3 h-4 w-4 shrink-0 stroke-current"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M5 12h14m-5-5 5 5-5 5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                />
+              </svg>
             </a>
 
             <a
-              className="inline-flex h-[52px] w-full items-center justify-center rounded-full bg-[#d28f94] px-7 font-sans text-base font-semibold text-white shadow-[0_18px_32px_rgba(201,131,136,0.24)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#c98388] hover:shadow-[0_22px_42px_rgba(201,131,136,0.32)] active:translate-y-0 active:bg-[#b9757a] sm:w-auto"
+              className="inline-flex h-[52px] w-full items-center justify-center gap-2 rounded-full bg-[#d28f94] px-7 font-sans text-base font-semibold text-white shadow-[0_18px_32px_rgba(201,131,136,0.24)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#c98388] hover:shadow-[0_22px_42px_rgba(201,131,136,0.32)] active:translate-y-0 active:bg-[#b9757a] sm:w-auto"
               href="https://wa.me/554833693265?text=Ol%C3%A1%2C%20vim%20do%20google%20e%20gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Miriam"
               target="_blank"
               rel="noreferrer"
               onClick={trackWhatsAppClick}
             >
+              <HeaderWhatsAppIcon className="h-4 w-4" />
               Agende no WhatsApp
             </a>
           </div>
