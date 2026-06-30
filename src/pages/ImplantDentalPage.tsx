@@ -675,7 +675,7 @@ function BeforeAfterCasesSection() {
   useEffect(() => {
     const updateVisibleCards = () => {
       if (window.innerWidth >= 1024) {
-        setVisibleCards(3);
+        setVisibleCards(2);
         return;
       }
 
@@ -769,11 +769,11 @@ function BeforeAfterCasesSection() {
               {loopedCases.map((item, index) => (
                 <article
                   key={`${item.title}-${index}`}
-                  className="min-w-full px-3 md:min-w-[50%] lg:min-w-[33.333%]"
+                  className="min-w-full px-3 md:min-w-[50%]"
                 >
                   <div className="h-full overflow-hidden rounded-[18px] border border-brand-ink/10 bg-[#fff8f5] shadow-[0_20px_46px_rgba(120,72,79,0.09)]">
                     <div className="grid grid-cols-2">
-                      <div className="relative aspect-[4/3] overflow-hidden border-r border-brand-ink/10 bg-white">
+                      <div className="relative aspect-[4/3.15] overflow-hidden border-r border-brand-ink/10 bg-white">
                         <img
                           src={item.beforeImage}
                           alt={`${item.title} antes do implante dentário`}
@@ -782,7 +782,7 @@ function BeforeAfterCasesSection() {
                           decoding="async"
                         />
                       </div>
-                      <div className="relative aspect-[4/3] overflow-hidden bg-white">
+                      <div className="relative aspect-[4/3.15] overflow-hidden bg-white">
                         <img
                           src={item.afterImage}
                           alt={`${item.title} depois do implante dentário`}
