@@ -740,8 +740,8 @@ function BeforeAfterCasesSection() {
       id="casos-reais"
       aria-labelledby="casos-heading"
     >
-      <div className="mx-auto w-[min(1216px,calc(100vw-32px))]">
-        <div className="mx-auto max-w-[760px] text-left md:text-center">
+      <div className="mx-auto w-[min(1216px,calc(100vw-16px))] md:w-[min(1216px,calc(100vw-32px))]">
+        <div className="mx-auto max-w-[760px] px-2 text-left md:px-0 md:text-center">
           <SectionEyebrow>Casos reais</SectionEyebrow>
           <h2
             className="mt-3 font-display text-[2.45rem] leading-[1.05] tracking-[-0.035em] text-brand-ink lg:text-[46px]"
@@ -769,11 +769,11 @@ function BeforeAfterCasesSection() {
               {loopedCases.map((item, index) => (
                 <article
                   key={`${item.title}-${index}`}
-                  className="min-w-full px-3 md:min-w-[50%]"
+                  className="min-w-full px-1 md:min-w-[50%] md:px-3"
                 >
                   <div className="h-full overflow-hidden rounded-[18px] border border-brand-ink/10 bg-[#fff8f5] shadow-[0_20px_46px_rgba(120,72,79,0.09)]">
                     <div className="grid grid-cols-2">
-                      <div className="relative aspect-[4/3.15] overflow-hidden border-r border-brand-ink/10 bg-white">
+                      <div className="relative aspect-[4/3.45] overflow-hidden border-r border-brand-ink/10 bg-white md:aspect-[4/3.15]">
                         <img
                           src={item.beforeImage}
                           alt={`${item.title} antes do implante dentário`}
@@ -782,7 +782,7 @@ function BeforeAfterCasesSection() {
                           decoding="async"
                         />
                       </div>
-                      <div className="relative aspect-[4/3.15] overflow-hidden bg-white">
+                      <div className="relative aspect-[4/3.45] overflow-hidden bg-white md:aspect-[4/3.15]">
                         <img
                           src={item.afterImage}
                           alt={`${item.title} depois do implante dentário`}
