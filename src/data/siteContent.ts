@@ -19,6 +19,7 @@ export const services: Service[] = [
     title: "Implantes Dentários",
     description:
       "Recupera dentes perdidos com função, estética e segurança de forma duradoura.",
+    href: "/tratamentos/implante-dentario",
   },
   {
     title: "Clareamento Dental",

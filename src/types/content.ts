@@ -6,6 +6,7 @@ export type NavItem = {
 export type Service = {
   title: string;
   description: string;
+  href?: string;
 };
 
 export type Differential = {

@@ -89,7 +89,10 @@ export function Footer() {
           <ul className="mt-4 grid gap-2 text-[14px] text-brand-ink/70">
             {services.slice(0, 5).map((service) => (
               <li key={service.title}>
-                <a className="transition hover:text-brand-rose-500" href="/tratamentos">
+                <a
+                  className="transition hover:text-brand-rose-500"
+                  href={service.href ?? "/tratamentos"}
+                >
                   {service.title}
                 </a>
               </li>

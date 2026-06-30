@@ -46,9 +46,10 @@ export function ServicesSection() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:mt-[42px] xl:grid-cols-3">
           {services.map((service, index) => (
-            <article
+            <a
               key={service.title}
               className="flex min-h-[304px] flex-col items-center justify-center rounded-[18px] border border-white/80 bg-white px-8 py-10 text-center shadow-[0_20px_46px_rgba(120,72,79,0.09)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_26px_56px_rgba(120,72,79,0.13)]"
+              href={service.href ?? "/tratamentos"}
             >
               <img
                 src={icons[index]}
@@ -63,7 +64,7 @@ export function ServicesSection() {
               <p className="mt-4 max-w-[286px] text-[14px] leading-[26px] text-[#7f7472]">
                 {service.description}
               </p>
-            </article>
+            </a>
           ))}
 
           <div className="flex min-h-[180px] items-center rounded-[18px] bg-[#f7e9e7] px-6 py-6 text-brand-ink shadow-[0_20px_46px_rgba(120,72,79,0.09)] md:col-span-2 lg:px-8 xl:col-span-2">
