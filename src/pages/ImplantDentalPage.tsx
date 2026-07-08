@@ -128,42 +128,56 @@ const casePlaceholders = [
   {
     beforeImage: implantCase1Before,
     afterImage: implantCase1After,
+    beforeImageClassName: "scale-[1.05] object-[center_58%]",
+    afterImageClassName: "scale-[1.28] object-[center_64%]",
     title: "Caso real 01",
     description: "Antes e depois de reabilitação com implante dentário.",
   },
   {
     beforeImage: implantCase2Before,
     afterImage: implantCase2After,
+    beforeImageClassName: "scale-[1.05] object-[center_56%]",
+    afterImageClassName: "scale-[1.2] object-[center_62%]",
     title: "Caso real 02",
     description: "Resultado após planejamento para recuperar o sorriso.",
   },
   {
     beforeImage: implantCase3Before,
     afterImage: implantCase3After,
+    beforeImageClassName: "scale-[1.24] object-[center_84%]",
+    afterImageClassName: "translate-y-[-16%] scale-[1.55] object-[center_66%]",
     title: "Caso real 03",
     description: "Caso acompanhado para devolver estética e confiança.",
   },
   {
     beforeImage: implantCase4Before,
     afterImage: implantCase4After,
+    beforeImageClassName: "scale-[1.08] object-[center_58%]",
+    afterImageClassName: "scale-[1.25] object-[center_62%]",
     title: "Caso real 04",
     description: "Evolução do sorriso após tratamento reabilitador.",
   },
   {
     beforeImage: implantCase6Before,
     afterImage: implantCase6After,
+    beforeImageClassName: "scale-[1.08] object-[center_57%]",
+    afterImageClassName: "translate-y-[-6%] scale-[1.48] object-[center_66%]",
     title: "Caso real 05",
     description: "Antes e depois com foco em função e naturalidade.",
   },
   {
     beforeImage: implantCase7Before,
     afterImage: implantCase7After,
+    beforeImageClassName: "scale-[1.08] object-[center_56%]",
+    afterImageClassName: "translate-y-[-8%] scale-[1.48] object-[center_66%]",
     title: "Caso real 06",
     description: "Planejamento para recuperar harmonia e segurança ao sorrir.",
   },
   {
     beforeImage: implantCase8Before,
     afterImage: implantCase8After,
+    beforeImageClassName: "scale-[1.1] object-[center_58%]",
+    afterImageClassName: "scale-[1.28] object-[center_64%]",
     title: "Caso real 07",
     description: "Resultado final após reabilitação odontológica planejada.",
   },
@@ -777,7 +791,7 @@ function BeforeAfterCasesSection() {
                         <img
                           src={item.beforeImage}
                           alt={`${item.title} antes do implante dentário`}
-                          className="h-full w-full object-cover"
+                          className={`h-full w-full object-cover brightness-[1.14] contrast-[1.04] saturate-[1.05] ${item.beforeImageClassName}`}
                           loading="lazy"
                           decoding="async"
                         />
@@ -786,7 +800,7 @@ function BeforeAfterCasesSection() {
                         <img
                           src={item.afterImage}
                           alt={`${item.title} depois do implante dentário`}
-                          className="h-full w-full object-cover"
+                          className={`h-full w-full object-cover brightness-[1.14] contrast-[1.04] saturate-[1.05] ${item.afterImageClassName}`}
                           loading="lazy"
                           decoding="async"
                         />
